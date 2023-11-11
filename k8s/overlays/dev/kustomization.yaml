@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# commonLabels:
+#   app.xgeeks.org/team: idp_geekathon
+#   backstage.io/kubernetes-id: stack-overflowers
+
+namespace: idpkathon-dev
+# namespace: stack-overflowers-idp_geekathon-dev
+
+resources:
+  - ../../base
+  - ingress.yaml
+
+images:
+  # ATENTION name = image.name NOT name = spec.containers[0].name
+  - name: ghcr.io/xgeeks-geekathon/stack-overflowers
+    newTag: v1
+  - name: ghcr.io/xgeeks-geekathon/stack-overflowers-datafeeder
+    newTag: v1
+# replicas:
+#   - name: stack-overflowers # the deployment name
+#     count: 1
