@@ -17,4 +17,4 @@ images:
 - name: ghcr.io/xgeeks-geekathon/stack-overflowers
   newTag: cb75b48
 - name: ghcr.io/xgeeks-geekathon/stack-overflowers-datafeeder
-  newTag: cb75b48
+  newTag: 0bde739
